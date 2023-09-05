@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Text Formatter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div class="container-fluid py-4 bg-dark text-white min-vh-100">
+        <form class="card bg-dark-subtle mb-3">
+            <div class="card-body row gy-3">
+                <div class="">
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="input_trim">
+                        <label class="form-check-label" for="input_trim">
+                            trim
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="input_remove_more_than_one_space">
+                        <label class="form-check-label" for="input_remove_more_than_one_space">
+                            remove more than one space
+                            <code><s>extra space</s></code>
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" value=""
+                            id="input_remove_more_than_one_new_line">
+                        <label class="form-check-label" for="input_remove_more_than_one_new_line">
+                            remove more than one new line
+                            <code><s>new line</s></code>
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="input_roman_numbers">
+                        <label class="form-check-label" for="input_roman_numbers">
+                            roman numbers
+                            <code>xvi)</code>
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="input_numbers">
+                        <label class="form-check-label" for="input_numbers">
+                            numbers
+                            <code>10)</code>
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="input_alphabet">
+                        <label class="form-check-label" for="input_alphabet">
+                            alphabet
+                            <code>a)</code>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex gap-2">
+                <button id="button_reset" class="btn btn-secondary" type="reset">Reset</button>
+                <button id="button_apply" class="btn btn-success" type="button">Apply</button>
+            </div>
+        </form>
+
+        <div class="card bg-dark-subtle">
+            <div class="card-body row row-cols-lg-2" style="min-height: 450px;">
+                <div class="col d-flex flex-column">
+                    <label for="" class="form-label">Original Text</label>
+                    <textarea id="original_text" class="form-control flex-fill"></textarea>
+                </div>
+                <div class="col d-flex flex-column">
+                    <label for="" class="form-label">Formatted Text</label>
+                    <div class="col-lg-6">
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-text" for="input_search"><i class="bi bi-search"></i></label>
+                            <input class="form-control" type="text" value="" id="input_search">
+                            <div id="search_traverse" class="d-flex align-items-center gap-2 bg-light-subtle ms-3"></div>
+                        </div>
+                    </div>
+                    <div class="position-relative flex-fill">
+                        <button id="button_copy_formatted_text"
+                            class="btn btn-light btn-sm position-absolute bottom-100 end-0">copy</button>
+                        <pre id="formatted_text" class="form-control h-100" contenteditable="true"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

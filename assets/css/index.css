@@ -1,0 +1,20 @@
+textarea,
+#formatted_text {
+    min-height: 300px !important;
+    /* height    : 200px; */
+    resize    : vertical;
+    scroll-behavior: smooth;
+}
+
+[id^=mark-].active {
+    background-color: yellow;
+}
+
+.form-check-inline{
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: var(--bs-light);
+}
+.form-check-inline>*{
+    cursor: pointer;
+}
